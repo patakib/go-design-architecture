@@ -50,5 +50,5 @@ func main() {
 `
 In this example, the Logger interface and the StdoutLogger struct belong to the infrastructure layer, while the Service struct is part of the application's inner layer. The main function is the outer layer, and it depends on the inner layer (Service) to perform some action and log a message.
 
-The Service struct receives its Logger dependency as a constructor parameter, and this dependency is injected into the Service struct by the NewService function. This allows the `
+The Service struct receives its Logger dependency as a constructor parameter, and this dependency is injected into the Service struct by the NewService function. This separation of concerns allows for more maintainable and testable code, as the Service struct can be tested in isolation from the Logger dependency. It also makes it easier to swap out the Logger dependency for a different implementation (e.g., a logger that logs to a file instead of stdout) without affecting the Service struct. `
 `
