@@ -1,3 +1,9 @@
+`
+In this example, the Entity, EntityRepository, and EntityService interfaces form the application's inner layer, while the MySQLEntityRepository struct is a concrete implementation of the EntityRepository interface that belongs to the infrastructure layer. The main function is the outer layer, and it depends on the inner layer (EntityService) to perform business logic.
+
+This separation of concerns allows for more maintainable and testable code, as the inner layer can be tested in isolation from the infrastructure layer. It also makes it easier to swap out the infrastructure layer (e.g., switching to a different database) without affecting the inner layer.
+`
+
 package main
 
 import (
