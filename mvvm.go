@@ -57,3 +57,10 @@ func main() {
 		log.Fatal(err)
 	}
 }
+
+
+`
+In this example, the Model, ViewModel, and View structs form the application's inner layer. The ViewModel struct is a layer between the View struct and the Model struct that exposes data and functionality to the View struct and handles user input from the View struct. The main function is the outer layer, and it depends on the inner layer (View) to display the user interface and handle user input.
+
+This separation of concerns allows for more maintainable and testable code, as the inner layer can be tested in isolation from the outer layer. It also makes it easier to modify the user interface without affecting the business logic.
+`
